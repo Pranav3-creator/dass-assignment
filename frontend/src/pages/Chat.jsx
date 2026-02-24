@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import { io } from "socket.io-client"
 import a from "../api/api"
 
-const sk = io("http://localhost:5000")
+const sk = io(import.meta.env.VITE_SOCKET)
 
 export default function Chat() {
   const { id } = useParams()
