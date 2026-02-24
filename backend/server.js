@@ -34,7 +34,16 @@ app.use("/api/att", att)
 app.use("/api/chat", chat)
 
 const srv = http.createServer(app)
-const io = new Server(srv, { cors: { origin: "*" } })
+const io = new Server(srv, {
+  cors: {
+    origin: [
+      "http://localhost:5173",
+      "https://dass-assignment-qr7w.vercel.app"
+    ],
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+})
 
 s(io)
 
