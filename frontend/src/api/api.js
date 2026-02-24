@@ -11,3 +11,5 @@ a.interceptors.request.use(c => {
 })
 
 export default a
+
+console.log("build check")
