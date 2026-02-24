@@ -10,6 +10,8 @@ a.interceptors.request.use(c => {
   return c
 })
 
+console.log("build check", import.meta.env.VITE_API)
+
 export default a
 
-console.log("build check")
+
